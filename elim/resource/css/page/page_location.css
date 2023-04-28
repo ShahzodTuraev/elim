@@ -1,0 +1,4 @@
+#PAGE_LOCATION { background:#fff; border-radius:10px; height:calc(100% - 150px); top:75px; padding:50px 100px; }
+#PAGE_LOCATION p.title { color:var(--blue); width:100%; text-align:center; font-size:18px; font-weight:500; margin-bottom:20px; }
+#PAGE_LOCATION span.blue { color:var(--blue); margin:0 10px; }
+#PAGE_LOCATION img.equip_list { border:1px solid #ddd; border-left:none; border-top:none; }

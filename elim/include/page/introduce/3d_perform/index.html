@@ -1,0 +1,191 @@
+
+
+		<style>
+			#progress-bar-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#progress-bar {
+				width: 30%;
+				margin-top: 0.5%;
+				height: 2%;
+			}
+
+			.progress-label {
+				color: white;
+				font-size: 2rem;
+			}
+
+			.point {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index:1;
+			}
+
+			.point-label {
+				position: absolute;
+				width: 35px;
+				height: 35px;
+        background-color: #fff;
+				color: var(--blue);
+				border-radius: 25px;
+				text-align: center;
+				padding: 0 auto;
+				line-height: 35px;
+				font-weight: 300;
+				font-size: 20px;
+				transition: .3s;
+        cursor:pointer;
+			}
+
+			.point-label:hover {
+				background:var(--blue);
+        color:#fff;
+			}
+
+			.point-heading {
+				bottom: 30px; 
+				right: 30%; 
+				color: #ffffff;
+				text-align: center;
+				font-size: 20px;
+				font-weight: 600;
+			}
+
+			.zoom-out {
+				position: absolute;
+				bottom: 10%;
+				right: 50%;
+				z-index:1;
+			}
+
+			.zoom-out-label {
+				position: absolute;
+				width: 100px;
+				height: 40px;
+				background-color: #fff;
+				color: var(--blue);
+				text-align: center;
+				padding: 0 auto;
+				line-height: 40px;
+				font-weight: 300;
+				font-size: 16px;
+				transform: translateX(-50%);
+        cursor:pointer;
+				transition: .3s;
+        border-radius:10px;
+			}
+
+			.zoom-out-label:hover {
+				background:var(--blue);
+        color:#fff;
+			}
+
+			.hidden {
+				visibility: hidden;
+			}
+
+			.video-area { position:absolute; top:0; left:0; background:rgba(0,0,0,0.8); z-index:2; }
+			.video-area video { width:100%; height:100%; border-radius:10px; }
+			.meta-area { position:absolute; top:0; left:0; background:rgba(0,0,0,0.8); z-index:2; }
+			.meta-area iframe { width:100%; height:100%; border-radius:10px; }
+			.note-area { position:absolute; top:0; left:0; background:rgb(230, 227, 227); z-index:2;}
+
+		</style>
+	</head>
+		<div id="progress-bar-container">
+			<label class="progress-label">Loading...</label>
+			<progress id="progress-bar" value="0" max="100"></progress>
+		</div>
+		<div class="point point-0 hidden">
+			<label class="point-label">+</label>
+			<p class="point-heading">VIDEO POINT</p>
+		</div>
+		<div class="point point-1 hidden">
+			<label class="point-label">+</label>
+			<p class="point-heading">MENU POINT</p>
+		</div>
+		<div class="point point-2 hidden">
+			<label class="point-label">+</label>
+			<p class="point-heading">META POINT</p>
+		</div>
+		<div class="point point-3 hidden">
+			<label class="point-label">+</label>
+			<p class="point-heading">게시판 POINT</p>
+		</div>
+		<div class="zoom-out hidden">
+			<label class="zoom-out-label">초기화면</label>
+		</div>
+		<canvas id="app"></canvas>
+
+		<div class="video-area flex-row-center w-full h-full" style="display:none;">
+			<video autoplay controls muted><source src="/elim/resource/video/bexco_02.mp4" type="video/mp4"></video>
+		</div>
+		<div class="meta-area flex-row-center w-full h-full" style="display:none;">
+			<iframe class="kwicks-3d" src="https://my.matterport.com/show/?play=1&share=0&wh=0&m=oNe9oE7bB8u" frameborder="0"></iframe>
+		</div>
+		<div class="note-area flex-row-center w-full h-full" style="display:none;">
+			<h1 style="color: #000;">게시판</h1>
+		</div>
+		<style>
+		.header-msg { position:fixed; top:60px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.5); padding:8px; border-radius:10px; z-index:9999; font-size:24px; }
+		.footer-msg { position:fixed; bottom:20px; left:50%; transform: translateX(-50%); background:rgba(0,0,0,0.5); padding:8px; border-radius:10px; font-size:18px; }
+		.footer-msg input { margin:0 10px; background:#fff; padding:5px; color:#000; }
+		.footer-msg button { background:#fff; color:#000; }
+		</style>
+		<div class="header-msg flex-row-center hooker-msg" style="display:none;">안전진단의 모든것이 궁금하신가요?</div>
+		<div class="footer-msg flex-row-center hooker-msg" style="display:none;">
+			<p>이메일주소를 입력해주시면 안전진단의 모든것을 체험하실 수 있습니다</p>
+			<input type="text" placeholder="이메일주소 입력">
+			<button class="btn">전송</button>
+		</div>
+		<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+		<!-- 여기서부터 시작 -->
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.150/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.150/examples/jsm/"
+				}
+			}
+		</script>
+		<script>
+		$(function(){
+			$(`script[src='/elim/include/page/introduce/3d_perform/index.js']`).remove();
+			$('head').append(`<script type='module' src='/elim/include/page/introduce/3d_perform/index.js'><\/script>`);
+			
+			//포인터0클릭 > 비디오
+			$(`.point-0`).click(function(){
+				setTimeout(()=>{ $(`.video-area`).fadeIn(); },1000);
+			});
+
+			$(`.point-2`).click(function(){
+				setTimeout(()=>{ $(`.meta-area`).fadeIn(); },1000);
+			});
+
+			$(`.point-3`).click(function(){
+				setTimeout(()=>{ $(`.note-area`).fadeIn(); },1000);
+			});
+
+			//영상닫기
+			$(`.video-area`).not("video").click(function(){
+				$(this).fadeOut();
+				$(`.zoom-out-label`).click();
+			});
+
+			$(`.point-1`).click(function(){
+				setTimeout(()=>{ location.href="#/3d_perform" }, 500);
+			});
+		});
+		</script>

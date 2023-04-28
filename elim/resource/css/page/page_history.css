@@ -1,0 +1,5 @@
+
+#PAGE_HISTORY p.title { color:var(--blue); font-size:14px; font-weight:500; margin-bottom:10px; } 
+#PAGE_HISTORY {background:#fff; border-radius:10px; height:calc(100% - 150px); top:75px; }
+#PAGE_HISTORY ul { color:#444; font-weight:500; }
+#PAGE_HISTORY ul li { padding:4px 0; }

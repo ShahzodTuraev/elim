@@ -1,0 +1,75 @@
+/* result-header */
+#SEARCH_PAGE .result-header { 
+	width:100%;
+	background:rgba(255,255,255,0.1);
+	height:35%;
+	border-radius:10px;
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: center;
+	align-items: center;
+	padding:8px;
+	min-height:140px;
+	/* max-height:240px; */
+}
+
+/* 탑3 순위 */
+#SEARCH_PAGE .result-header .toprank-view { 
+	height:100%; width:100%; padding:4px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.rank-box { 
+	border-radius:5px; overflow:hidden; padding:8px; 
+	display:flex; align-items:flex-end; justify-content: center;
+	background:var(--gradient1);
+	aspect-ratio: 1 / 1;
+	max-width:300px;
+}
+
+.rank-title { position:absolute; bottom:8px; }
+/* category-list */
+#SEARCH_PAGE .category-list { 
+	height:60px; width:100%; padding:12px 8px;
+	display:flex; overflow-x:scroll;
+}
+
+#SEARCH_PAGE .category-list button { 
+	height:100%; margin-right:8px;
+}
+
+#SEARCH_PAGE .category-list button:last-child { margin-right:0;}
+
+
+/* 순위 테이블 영역 */
+#TABLE_RANK { 
+	width:100%;
+	height:calc(65% - 60px);
+}
+
+#TABLE_RANK * { color:#fff; }
+#TABLE_RANK .table_thead .table_td { padding:8px; height:40px; }
+#TABLE_RANK .table_thead .table_td:nth-of-type(1) { flex:1; }
+#TABLE_RANK .table_thead .table_td:nth-of-type(2) { flex:2; }
+#TABLE_RANK .table_thead .table_td:nth-of-type(3) { flex:3; }
+
+#TABLE_RANK_TBODY { height:calc(100% - 40px); overflow-y:scroll; width:100%; }
+#TABLE_RANK_TBODY .table_td { padding:8px; }
+#TABLE_RANK_TBODY .table_td:nth-of-type(1) { flex:1; }
+#TABLE_RANK_TBODY .table_td:nth-of-type(2) { flex:2; }
+#TABLE_RANK_TBODY .table_td:nth-of-type(3) { flex:3; }
+
+
+/* MAP VIEW*/
+.topmap-view {
+	height:100%; width:100%; padding:4px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn-change-mapview { position:absolute; right:8px; bottom:8px; }
+
+@media (max-height : 560px) {
+	#TABLE_RANK { height:calc(100% - 208px); }
+}

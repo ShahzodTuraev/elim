@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+	<meta name="referrer" content="no-referrer"/>
+	
+	<!-- SEO -->
+	<meta name="keywords" content="엘림, 엘림건설, 엘림주식회사">
+	<meta name="description" content="주식회사 엘림">
+	<meta name="author" content="meVer">
+	<meta name="type" content="website">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://mever.me">
+	<meta property="og:title" content="엘림">
+	<meta property="og:keywords" content="">
+	<meta property="og:description" content="">
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QB9RGWH03"></script>
+	<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-7QB9RGWH03');</script>
+	<!-- user-scalable=0 -->
+	
+	<title>엘림</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+	<!-- jQuery -->	
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- sammy -->
+	<script src="/elim/resource/js/plugin/sammy/sammy.js"></script>
+	
+	<!-- axios -->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	
+	<!-- scroll -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js" integrity="sha512-zMfrMAZYAlNClPKjN+JMuslK/B6sPM09BGvrWlW+cymmPmsUT1xJF3P4kxI3lOh9zypakSgWaTpY6vDJY/3Dig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/elim/resource/js/plugin/easeScroll/easeScroll.js"></script>
+
+	<!--SLICK SLIDER-->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<!-- fontawesome -->
+	<script src="https://kit.fontawesome.com/1971fd645a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- underscore -->
+	<script src="https://cdn.jsdelivr.net/npm/underscore@1.13.3/underscore-umd-min.js"></script>
+
+	<!-- moment.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.min.js" integrity="sha512-3kMAxw/DoCOkS6yQGfQsRY1FWknTEzdiz8DOwWoqf+eGRN45AmjS2Lggql50nCe9Q6m5su5dDZylflBY2YjABQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<!-- 카카오맵 API -->
+	<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2da218e93133e6b8059c9ef4d110a2cc&libraries=services"></script>
+
+	<!-- TAILWIND CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- KIWCKS -->
+  <link rel="stylesheet" href="/elim/resource/plugin/kwicks/jquery.kwicks.css">
+	<script src="/elim/resource/plugin/kwicks/jquery.kwicks.js"></script>
+
+	<!-- 웹폰트-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+
+	<!-- CSS  -->
+	<link rel="stylesheet" href="/elim/resource/css/reset.css">
+	<link rel="stylesheet" href="/elim/resource/css/custom_alert.css">
+	<link rel="stylesheet" href="/elim/resource/css/div_table.css">
+	<link rel="stylesheet" href="/elim/resource/css/page_transiton.css">
+	<link rel="stylesheet" href="/elim/resource/css/ui_kit.css">
+
+	<!-- JS/공통 -->
+	<script src="router.js"></script>
+	<script src="/elim/resource/js/common.js"></script>
+	<script src="/elim/resource/js/menu.js"></script>
+
+	<!-- JS/popup -->
+	<!-- <script src="/elim/resource/js/popup/pop_chat.js"></script> -->
+
+	<!-- JS/page -->
+	<!-- <script src="/elim/resource/js/page/page_search.js"></script> -->
+
+</head>
+<body class='fixed h-full text-white flex-row-center' oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+
+<div id="WRAPPER" class="drop-shadow-2xl">
+
+<!-- UI -->
+<section id="MODAL" class="fixed w-screen h-screen z-40 bg-neutral-900/90 hidden"></section>
+
+
+<!-- header(nav) -->
+<header class="absolute flex-row-center white">
+
+  <h1 id="LOGO" class="fixed" ><a href="https://mever.me/elim">ELIM</a></h1>
+	<!-- 3단 메뉴바 -->
+	<input type="checkbox" id="MENU_ICON"><label for="MENU_ICON"><span></span><span></span><span></span></label>	
+	<!-- 사이드바 -->
+	<nav id="SIDEBAR" class="backdrop-blur-sm">
+    <div class="ui-page-title">
+      <p id="MENU_TEXT" class="menu">MENU</p>
+      <p id="SUBMENU_TEXT" class="page-title">메뉴 네비게이션</p>
+    </div>
+    <div class="ui-login-menu">
+      <p>로그인</p>
+      <p>회원가입</p>
+      <p>문의하기</p>
+    </div>
+    <div class="ui-preview-box drop-shadow-md">
+      페이지 미리보기(이미지/영상)
+      <div class="ui-preview-context">
+        <p class="text-xl ">페이지 설명(메인) </p>
+        <p class="pt-4">페이지 설명/요약(서브)</p> 
+      </div>
+    </div>
+    <ul class="menu">
+      <li><span><a href="https://mever.me/elim">메인화면</a></span></li>
+      </li>
+      <li><span>회사소개</span> 
+        <ul class="submenu">
+          <li><a href="/#/greetings">인사말</a></li>
+          <li><a href="/#/history">회사연혁</a></li>
+          <li><a href="/#/organization">회사조직</a></li>
+          <li><a href="/#/registry">등록현황(특허)</a></li>
+          <li><a href="/#/equipment">장비현황</a></li>
+          <li><a href="/#/location">회사위치</a></li>
+          <li><span><a href="/#/3d_perform">진단기록 AR체험</a></span> 
+        </ul>
+      </li>
+      <li><span class="text-3xl">안전진단</span> 
+        <ul class="submenu">
+          <li><a href="/#/safe_construct">건축 안전진단</a></li>
+          <li><a href="/#/safe_civil">토목 안전진단</a></li>
+          <li><a href="/#/engineering">엔지니어링</a></li>
+					<li><span><a href="/#/3d">기술개발(동영상)</a></span> 
+        </ul>
+      </li>
+      <li><span style="font-size:1.7rem;">기계설비</span> 
+        <ul class="submenu">
+          <li><a href="/#/check_machine">기계설비점검</a></li>
+          <li><a href="/#/check_performance">점검실적</a></li>
+          <li><a href="/#/development">기술개발(동영상)</a></li>
+        </ul>
+      </li>
+      <li><span class="text-3xl">건설사업</span> 
+        <ul class="submenu">
+          <li><a href="/#/work_construction">건축공사</a></li>
+          <li><a href="/#/work_repair">보수보강공사</a></li>
+          <li><a href="/#/work_waterproof">방수공사</a></li>
+          <li><a href="/#/development">방수공사기술개발(동영상)</a></li>
+        </ul>
+      </li>
+      <li><span class="text-3xl">상담 문의</span> 
+        <ul class="submenu">
+          <li><a href="/#/consult">상담/견적</a></li>
+          <li><a href="/#/employment">채용안내</a></li>
+          <li><a href="/#/notice">공지사항</a></li>
+        </ul>
+      </li>
+    </ul>
+	</nav>
+</header>
+
+<!-- ui-line&dot -->
+<section class="ui-line-box white">
+	<div class="ui-line">
+		<div class="ui-dot"></div>
+		<div class="ui-dot" style="display:none;"></div>
+	</div>
+	<div class="ui-line">
+		<div class="ui-dot"></div>
+		<div class="ui-dot"></div>
+	</div>
+	<div class="ui-line">
+		<div class="ui-dot"></div>
+		<div class="ui-dot"></div>
+	</div>
+	<div class="ui-line">
+		<div class="ui-dot"></div>
+		<div class="ui-dot"></div>
+	</div>
+	<div class="ui-line">
+		<div class="ui-dot"></div>
+		<div class="ui-dot"></div>
+	</div>
+</section>
+<!-- UI END -->
+
+<!-- PAGE_TRANSITION : 페이지 전환효과 -->
+<section id="PAGE_TRANSITION" style="z-index:1000;"><div></div><div></div></section>
+
+<!-- PAGE_VIEW : 페이지 표시되는곳 -->
+<section id="PAGE_VIEW" class="absolute w-full h-full" style="background:url(/elim/resource/images/main_bg.jpg) no-repeat;">
+
+</section>
+
+<!-- POPUP_VIEW : 팝업 표시되는곳 -->
+<!-- <section id="POPUP_VIEW" class="fixed w-screen h-full z-40 hidden"></section> -->
+
+<!-- CUSTOM_ALERT   -->
+<!-- <section class="ca_container"><div class="ca_box" type="ok"><div class="ca_title"></div></div></section> -->
+
+</div>
+<!-- WRAPPER END -->
+</body>
+<script>
+$(function(){
+  $(`.submenu li`).click(function(){
+    $("#MENU_ICON").click();
+  });
+});
+</script>
+</html>

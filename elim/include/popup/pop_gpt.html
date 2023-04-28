@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="/elim/resource/css/popup/pop_gpt.css">
+<div id="POPUP_GPT" class="popup absolute w-screen h-full flex flex-col items-center justify-start backdrop-blur-lg">
+	<i class="fa-solid fa-xmark btn_close z-10"></i>
+	<div class="popup-header">
+		<span class="popup_title">MEVER AI</span>
+		<button class="btn_close"></button>
+	</div>
+	<div class="popup-main flex-column-start">
+		<div id="GPT_CHAT_BOX" class="flex-column-start nowrap">
+			<p class="font-bold mb-2">답변 내용은 300 Byte로 제한됩니다. 질문이 구체적일수록 좋은 답변을 얻을 수 있으며, 2021년까지의 수집데이터에 기반합니다</p>
+			<p class="gpt-chat drop-shadow-lg"><span class="chat">무엇을 도와드릴까요?</span> </p>
+			<p id="GPT_LOADING" class="blink">답변을 고민중이에요</p>
+		</div>
+		<div class="div_button_area flex-row-start w-screen p-2">
+			<input id="INPUT_GPT_CHAT" class='text-sm' type="text" placeholder="질문내용 입력">
+			<button id="BTN_GPT_SUBMIT" class="btn btn_magenta w-20">전송</button>
+		</div>
+	</div>
+</div>
+	
+<script>
+var API_KEY = "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";
+var API_URL = "https://api.openai.com/v1/completions";
+$(function(){
+
+	$("#GPT_CHAT_BOX").niceScroll();
+
+	$("#BTN_GPT_SUBMIT").click(function(){
+		let context = $("#INPUT_GPT_CHAT").val();
+		$("#GPT_CHAT_BOX").append(`<p class='user-chat drop-shadow-lg'><span class='chat'>${context}</span></p>`);
+
+		let chat_log = '';
+
+		//채팅로그 추적
+		$(".chat").each(function(x){
+			let text = $(this).text()+"\n\n";
+			chat_log+= text;
+		});
+
+		chatGPT(chat_log);
+		$("#INPUT_GPT_CHAT").val('');
+	});
+
+});
+
+function chatGPT(context)
+{
+	$("#GPT_LOADING").show();
+
+	axios.post(API_URL, {
+	model: "text-davinci-003",
+	prompt: context,
+	max_tokens: 300,
+	n: 1,
+	top_p: 1,
+	temperature:0.01,
+
+	frequency_penalty: 0.5,
+	presence_penalty: 0,
+	stop: null,
+}, {
+	headers: {
+		"Content-Type": "application/json",
+		Authorization: `Bearer ${API_KEY}`,
+	}
+})
+.then((response) => {
+	let res = response.data.choices[0].text;
+	$("#GPT_CHAT_BOX").append(`<p class='gpt-chat drop-shadow-lg'><span class='chat'>${res}</span></p>`);
+	$("#GPT_LOADING").fadeOut();
+})
+.catch((error) => {
+	console.error(error);
+	$("#GPT_CHAT_BOX").append(`<p>현재 GPT 서버 이용자가 너무 많습니다. 불편을 드려 죄송합니다</p>`);
+	$("#GPT_LOADING").fadeOut();
+});
+}
+</script>

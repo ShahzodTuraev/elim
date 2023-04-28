@@ -1,0 +1,539 @@
+<link rel="stylesheet" href="/elim/resource/css/popup/pop_sto.css">
+<div id="POPUP_STO" class="popup absolute w-screen h-full flex flex-col items-center justify-start backdrop-blur-lg">
+	<i class="fa-solid fa-xmark btn_close z-10"></i>
+	<div class="popup-header wrap">
+		<div id="STO_PROGRESS" class="progress-container">
+			<div class="progress-name-container">
+				<p class="progress-name selected">이미지 등록</p>
+				<p class="progress-name">정보입력</p>
+				<p class="progress-name">정보확인</p>
+				<p class="progress-name">신청완료</p>
+			</div>
+			<div class="progress-bar-container">
+				<div class="progress-bar"><span class="progress-ball"></span></div>
+			</div>
+		</div>
+		<button class="btn_close"></button>
+	</div>
+	<div id="STO_CONTENTS" class="popup-main flex-column-start">
+		<div class="sto-page selected" pageNum="1">
+			<div class="upload-thumb">
+				<div class="sto-block-view">
+					<div class="cubes">
+						<!--   row, column, z -->
+						<div class="cube" data-cube="111">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-z" data-cube="112"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="121">
+							<div class="cube-wrap">
+								<div class="cube-top">
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="131">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-z" data-cube="132"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="211">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="111"></div>
+									<div class="shadow-y" data-cube="111"></div>
+									<div class="shadow-z" data-cube="212"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="221">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="121"></div>
+									<div class="shadow-y" data-cube="121"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="231">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="131"></div>
+									<div class="shadow-y" data-cube="131"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="311">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="211"></div>
+									<div class="shadow-y" data-cube="211"></div>
+									<div class="shadow-z" data-cube="312"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="321">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="221"></div>
+									<div class="shadow-y" data-cube="221"></div>
+									<div class="shadow-z" data-cube="322"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="331">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="231"></div>
+									<div class="shadow-y" data-cube="231"></div>
+									<div class="shadow-z" data-cube="332"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+					
+						<!-- top layer -->
+						<div class="cube" data-cube="112">
+							<div class="cube-wrap">
+								<div class="cube-top">
+					
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="122">
+							<div class="cube-wrap">
+								<div class="cube-top">
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="132">
+							<div class="cube-wrap">
+								<div class="cube-top">
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="212">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="112"></div>
+									<div class="shadow-y" data-cube="112"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="222">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="122"></div>
+									<div class="shadow-y" data-cube="122"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="232">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="132"></div>
+									<div class="shadow-y" data-cube="132"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="312">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="212"></div>
+									<div class="shadow-y" data-cube="212"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="322">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="222"></div>
+									<div class="shadow-y" data-cube="222"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="332">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="232"></div>
+									<div class="shadow-y" data-cube="232"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+					
+						<!-- bottom layer -->
+						<div class="cube" data-cube="113">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-z" data-cube="111"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="123">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-z" data-cube="121"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="133">
+							<div class="cube-wrap">
+								<div class="cube-top">
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="213">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="113"></div>
+									<div class="shadow-y" data-cube="113"></div>
+									<div class="shadow-z" data-cube="211"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="223">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-y" data-cube="123"></div>
+									<div class="shadow-z" data-cube="221"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="233">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-y" data-cube="133"></div>
+									<div class="shadow-z" data-cube="231"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="313">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="213"></div>
+									<div class="shadow-y" data-cube="213"></div>
+									<div class="shadow-z" data-cube="311"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="323">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="223"></div>
+									<div class="shadow-y" data-cube="223"></div>
+									<div class="shadow-z" data-cube="321"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						<div class="cube" data-cube="333">
+							<div class="cube-wrap">
+								<div class="cube-top">
+									<div class="shadow-flip" data-cube="233"></div>
+									<div class="shadow-y" data-cube="233"></div>
+									<div class="shadow-z" data-cube="331"></div>
+								</div>
+								<div class="cube-bottom"></div>
+								<div class="cube-front-left"></div>
+								<div class="cube-front-right"></div>
+								<div class="cube-back-left"></div>
+								<div class="cube-back-right"></div>
+							</div>
+						</div>
+						
+						<div class="large-shadows">
+							<div class="large-shadow" data-cube="113"></div>
+							<div class="large-shadow" data-cube="123"></div>
+							<div class="large-shadow" data-cube="133"></div>
+							<div class="large-shadow" data-cube="213"></div>
+							<div class="large-shadow" data-cube="223"></div>
+							<div class="large-shadow" data-cube="233"></div>
+							<div class="large-shadow" data-cube="313"></div>
+							<div class="large-shadow" data-cube="323"></div>
+							<div class="large-shadow" data-cube="333"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-btn box1">
+				<img class='box-bg mix-blend-multiply' src="/elim/resource/images/camera.png" alt="">
+				<p class="box-title text-xl">IMAGE UPLOAD</p>
+				<p class="box-text text-xs">발행하실 상품의 이미지를 업로드합니다.</p>
+				<p class="box-text text-xs">버튼을 눌러 사진을 직접 촬영하거나, 올리실 이미지를 선택해주세요.</p>
+				<p class="box-text text-xs">업로드를 완료하였거나, 이미지 없이 올리시려면 하단의 [ 다음단계 ] 버튼을 눌러주세요</p>
+			</div>
+		</div>
+		<div class="sto-page justify-start" pageNum="2">
+			<div id="map" class="kakao-map"></div>
+			<input class="text-sm p-2" id="INPUT_ITEM_ADDRESS"  type="text" placeholder="위치정보 입력"><button id="BTN_SEARCH_ADD" class="btn btn_magenta p-2 ml-2">검색</button>
+			<input class="text-sm p-2" id="INPUT_ITEM_NAME"type="text" placeholder="상품명 입력">
+			<input class="text-sm p-2" id="INPUT_ITEM_TITLE" type="text" placeholder="제목 입력">
+			<input class="text-sm p-2" id="INPUT_ITEM_PRICE" type="text" placeholder="모집금액">
+			<input class="text-sm p-2" id="INPUT_ITEM_PIECE" type="text" placeholder="예상 조각 수(자동설정)" readonly>
+			<textarea class="text-sm p-2" id="TEXT_ITEM_CONTEXT" type="text" placeholder="상세내용 입력"></textarea>
+		</div>
+		<div class="sto-page selected" pageNum="3">
+			<div class="img-check flex-row-center">
+				<img src="" alt="" class="w-full" id="IMG_CHECK">
+				이미지가 없습니다
+			</div>
+			<input class="text-sm p-2" readonly id="INPUT_ITEM_ADDRESS_CHECK"  type="text" placeholder="위치정보">
+			<input class="text-sm p-2" readonly id="INPUT_ITEM_NAME_CHECK" type="text" placeholder="상품명 입력">
+			<input class="text-sm p-2" readonly id="INPUT_ITEM_TITLE_CHECK" type="text" placeholder="제목 입력">
+			<input class="text-sm p-2" readonly id="INPUT_ITEM_PRICE_CHECK" type="text" placeholder="모집금액">
+			<input class="text-sm p-2" readonly id="INPUT_ITEM_PIECE_CHECK" type="text" placeholder="예상 조각 수(자동설정)" readonly>
+			<textarea class="text-sm p-2" readonly id="TEXT_ITEM_CONTEXT_CHECK" placeholder="상세내용 입력"></textarea>
+		</div>
+		<div class="sto-page" pageNum="4">
+			<div class="w-full h-half flex-row-center">
+				<p class="w-full text-center">발행신청이 완료되었습니다</p>
+				<button class="btn btn_magenta mt-4">신청결과조회</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup-bottom justify-end pt-0">
+		<button id="BTN_NEXT_PUB" class="btn btn_magenta w-full h-full ii">다음단계</button>
+	</div>
+</div>
+	
+<script>
+$(function(){
+	let containerH = $("#STO_CONTENTS").height();
+	let itemObj = new Object();
+	$(".kakao-map").height(containerH/2 + 'px');
+
+	searchKakaoAddress(undefined,'MEVER');
+	let progress = 100/4;
+	let divide = 4;
+	let nameProgress = 1;
+	
+	$(`#BTN_NEXT_PUB`).click(function(){
+		
+		console.log('버튼클릭')
+		nameProgress += 1;
+		progress += (100/divide);
+		
+		if(nameProgress > divide){ nameProgress = divide};
+		if(progress > 100){ progress = 100}
+		
+		$(".progress-bar").width(`${progress}%`);
+		$(".progress-name").removeClass("selected");
+		$(".progress-name").eq(nameProgress - 1).addClass("selected");
+		$(".sto-page").removeClass("selected");
+		$(".sto-page").eq(nameProgress - 1).addClass("selected");
+
+		console.log(nameProgress);
+
+		if(nameProgress == 3)
+		{
+
+		}
+
+		switch(nameProgress)
+		{
+			case 1 : break;
+			case 2 : itemObj.img = ""; break;
+			case 3 : itemObj.info = makeItemObejct();break;
+			case 4 : $(`#BTN_NEXT_PUB`).hide(); break;
+		}
+	});
+
+
+	$(`#BTN_SEARCH_ADD`).click(function(){
+		let address = $(`#INPUT_ITEM_ADDRESS`).val(); 
+		searchKakaoAddress(address);
+		setTimeout(function(){$(`.kakao-map-marker`).addClass("moved");},100);
+	});
+
+
+	//상품명 설정시 카카오맵적용
+	$("#INPUT_ITEM_NAME").on("blur",function(){
+		let address = $(`#INPUT_ITEM_ADDRESS`).val(); 
+		let itemName = $(this).val();
+		searchKakaoAddress(address, itemName);
+		setTimeout(function(){$(`.kakao-map-marker`).addClass("moved");},100);
+	})
+
+	//상품가 입력시 콤마, 조각수
+	$("#INPUT_ITEM_PRICE").on("input paste change",function(){
+		inputNumber(this);
+		let price = $(this).val();
+		let piece = $(this).val()/1000;
+		$(this).val(numComma(price));
+		$('#INPUT_ITEM_PIECE').val(numComma(piece) + ' 조각');
+	});
+
+	//상품가 입력시 완료시 - 1000원 이하일때 경고
+	$("#INPUT_ITEM_PRICE").on("blur",function(){
+		let price = $(this).val();
+		if(price < 1000) { 
+			customAlert('1,000원 이하의 가격은 입력할 수 없습니다', '', 'alert');
+			$(this).val('');
+			$('#INPUT_ITEM_PIECE').val('');
+		}
+	});
+
+});
+
+//발행아이템 오브젝트 생성
+function makeItemObejct()
+{
+	let location 		= $(`#INPUT_ITEM_ADDRESS`).val();
+	let itemName 		= $(`#INPUT_ITEM_NAME`).val();
+	let itemTitle 	= $(`#INPUT_ITEM_TITLE`).val();
+	let itemPrice 	= $(`#INPUT_ITEM_PRICE`).val();
+	let itemPiece 	= $(`#INPUT_ITEM_PIECE`).val();
+	let itemContext = $(`#TEXT_ITEM_CONTEXT`).val();
+		
+	let obj = { location, itemName, itemTitle, itemPrice, itemPiece, itemContext } ;
+
+	checkItemObject(obj);
+
+	return obj;
+}
+
+//발행정보입력 확인
+function checkItemObject(obj)
+{
+	let { location, itemName, itemTitle, itemPrice, itemPiece, itemContext } = obj;
+
+	$(`#INPUT_ITEM_ADDRESS_CHECK`).val(location);
+	$(`#INPUT_ITEM_NAME_CHECK`).val(itemName);
+	$(`#INPUT_ITEM_TITLE_CHECK`).val(itemTitle);
+	$(`#INPUT_ITEM_PRICE_CHECK`).val(itemPrice);
+	$(`#INPUT_ITEM_PIECE_CHECK`).val(itemPiece);
+	$(`#TEXT_ITEM_CONTEXT_CHECK`).val(itemContext);
+}
+
+</script>

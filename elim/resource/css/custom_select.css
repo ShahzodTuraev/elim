@@ -1,0 +1,62 @@
+.customSelect * { box-sizing: border-box; }
+.customSelect {
+  position: relative;
+  /* width: 150px; */
+  height: 35px;
+  border-radius: 4px;
+  background: url('/resource/images/angle_down.png') calc(100% - 7px) center no-repeat;
+  background-size: 14px;
+  cursor: pointer;
+  /* transform: translateX(10%); */
+}
+
+.customSelect .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-right: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.customSelect .optionList {
+  position: absolute; 
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: var(--magentaG);
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  transition: .3s;
+  z-index:2;
+}
+
+.customSelect.active .optionList {
+  max-height: 500px;
+}
+
+.customSelect .optionItem {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 5px 15px 5px;
+  transition: .1s;
+}
+
+.customSelect .optionItem:hover {
+  background: rgb(175, 93, 93);
+}
+
+.customSelect .optionItem:last-child {
+  border-bottom: 0 none;
+}
+
+.customSelect .optionList::-webkit-scrollbar {width: 6px;}
+.customSelect .optionList::-webkit-scrollbar-track {background: transparent; }
+.customSelect .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.customSelect .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}

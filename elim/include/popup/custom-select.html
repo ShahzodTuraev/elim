@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="/elim/resource/css/popup/pop_rank.css">
+<div id="POPUP_RANK" class="popup absolute w-screen h-full flex flex-col items-center justify-start backdrop-blur-lg">
+	<div class="popup-header">
+		<div class="customSelect">
+			<button class="label">일간순위</button>
+			<ul class="optionList">
+				<li class="optionItem">일간순위</li>
+				<li class="optionItem">주간순위</li>
+				<li class="optionItem">월간순위</li>
+			</ul>
+		</div>
+		<i class="fa-solid fa-xmark btn_close z-10"></i>
+	</div>
+	<div class="popup-main flex-column-start">
+		<div class="table_container" style="height:calc(100% - 5rem);">
+      <div id="TABLE_RANK" class="table_tbody">
+        <div class="table_row">
+          <div class="table_td">1</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">2</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">3</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">4</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">5</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">6</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">7</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">8</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">9</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+        <div class="table_row">
+          <div class="table_td">10</div>
+          <div class="table_td">홍우빌딩</div>
+          <div class="table_td">50,000</div>
+        </div>
+      </div>
+    </div>
+	</div>
+	<div class="popup-bottom"></div>
+</div>
+	
+<script>
+/* 일반함수 */
+var label = document.querySelector('.label');
+var options = document.querySelectorAll('.optionItem');
+// 클릭한 옵션의 텍스트를 라벨 안에 넣음
+var handleSelect = function(item) {
+  label.innerHTML = item.textContent;
+  label.parentNode.classList.remove('active');
+}
+// 옵션 클릭시 클릭한 옵션을 넘김
+options.forEach(function(option){
+  option.addEventListener('click', function(){handleSelect(option)})
+})
+// 라벨을 클릭시 옵션 목록이 열림/닫힘
+label.addEventListener('click', function(){
+  if(label.parentNode.classList.contains('active')) {
+    label.parentNode.classList.remove('active');
+  } else {
+    label.parentNode.classList.add('active');
+  }
+});
+</script>

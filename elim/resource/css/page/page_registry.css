@@ -1,0 +1,5 @@
+#PAGE_REGISTRY { background:#fff; border-radius:10px; height:calc(100% - 150px); top:75px; padding:50px 100px; }
+#PAGE_REGISTRY p.title { color:var(--blue); width:100%; text-align:center; font-size:18px; font-weight:500; margin-bottom:20px; }
+#PAGE_REGISTRY .registry-list { width:100%; }
+#PAGE_REGISTRY .registry-list li { margin:10px; border-radius:5px; overflow:hidden; box-shadow:0 0 5px 0px rgba(0,0,0,0.1); }
+#PAGE_REGISTRY span.blue { color:var(--blue); margin:0 10px; }
