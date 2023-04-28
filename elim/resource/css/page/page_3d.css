@@ -1,5 +1,5 @@
 .drone-box { border-radius:10px; width:1720px; height:calc(100% - 150px); top:75px; overflow:hidden; display:none; }
-.drone-text-box { position:absolute; z-index:1; }
+.drone-text-box {position:absolute; z-index:1; height: 20%;}
 .drone-title { text-align:center; font-size:40px; }
 .drone-subtitle { text-align:center; font-size:28px; margin-top:10px; }
 .drone-content { text-align:center; }
@@ -18,7 +18,8 @@
 }
 
 .icon-spot:hover { transform:translateX(-50%) scale(1.1); }
-.kwicks-3d { width:calc(100% - 430px); height:100%; }
+.kwicks-3d { width:100%; height:100%; }
+/* .kwicks-3d { width:calc(100% - 430px); height:100%; } */
 .kwicks-detail {
   width:430px; position:absolute; right:0; top:0; height:100%; 
   display:flex;
@@ -58,7 +59,8 @@
 .kwicks li:nth-of-type(3):hover { background-position:0px 1080px; }
 .kwicks li:nth-of-type(4):hover { background-position:0px -1080px; }
 
-.kwicks-box { position:absolute; display:flex; justify-content: center; align-items: center; width:100%; flex-flow:row wrap; text-align:center; transition:.5s; background:rgba(0,0,0,0.6); padding:20px; }
-.kwicks-title { font-size:34px; width:100%; }
-.kwicks-subtitle { font-size:24px; width:100%; }
+/* .kwicks-box { border: 1px solid red; position:absolute; display:flex; justify-content: center; align-items: center; width:100%; flex-flow:row wrap; text-align:center; transition:.5s; background:rgba(0,0,0,0.6); padding:20px; } */
+.kwicks-box { position:absolute; display:flex; flex-direction: column; align-items: center; width:100%; height: 19%; transition:.5s; background:rgba(0,0,0,0.6); padding:20px; }
+.kwicks-title {margin-bottom: 10px; text-align: center; font-size:34px; width:100%; }
+.kwicks-subtitle {padding-left: 40px; font-size:24px; width:100%; }
 .kwicks-3d { display:none; }
